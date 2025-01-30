@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da Memória</h1>
+        <button id="theme-toggle">Modo Escuro</button>
+    </header>
+    <div class="info">
+        <p>Tempo: <span id="timer">00:00</span></p>
+        <p>Movimentos: <span id="moves">0</span></p>
+    </div>
+    <div class="game-board"></div>
+    <footer>
+        <button id="restart">Reiniciar Jogo</button>
+    </footer>
+
+    <audio id="match-sound" src="sounds/match.mp3" preload="auto"></audio>
+    <audio id="no-match-sound" src="sounds/no-match.mp3" preload="auto"></audio>
+    <script src="js/script.js"></script>
+</body>
+</html>
