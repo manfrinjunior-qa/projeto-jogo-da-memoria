@@ -23,6 +23,12 @@ header {
     margin: 20px 0;
 }
 
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 h1 {
     font-size: 3em;
     color: #007bff;
@@ -31,12 +37,11 @@ h1 {
 }
 
 body.dark-mode h1 {
-    color: #f0f0f0; /* Título no modo escuro */
+    color: #f0f0f0;
 }
 
-#theme-toggle {
+button, select {
     padding: 10px 20px;
-    margin-top: 10px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -45,8 +50,16 @@ body.dark-mode h1 {
     border-radius: 5px;
 }
 
-#theme-toggle:hover {
+button:hover, select:hover {
     background-color: #0056b3;
+}
+
+body.dark-mode button, body.dark-mode select {
+    background-color: #dc3545;
+}
+
+body.dark-mode button:hover, body.dark-mode select:hover {
+    background-color: #b92d2d;
 }
 
 .info {
@@ -69,10 +82,9 @@ body.dark-mode .info p {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(5, 100px);
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .card {
@@ -92,8 +104,8 @@ body.dark-mode .info p {
 }
 
 body.dark-mode .card {
-    background-color: #dc3545; /* Fundo vermelho para as cartas no modo escuro */
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Sombras para dar destaque */
+    background-color: #dc3545;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
 .card-inner {
@@ -109,21 +121,12 @@ body.dark-mode .card {
     transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
+.card-front, .card-back {
     width: 100%;
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
     border-radius: 10px;
-}
-
-.card-front {
-    background-color: #007bff;
-}
-
-body.dark-mode .card-front {
-    background-color: #b92d2d; /* Frente do card no modo escuro (vermelho escuro) */
 }
 
 .card-back {
@@ -137,27 +140,9 @@ body.dark-mode .card-front {
 }
 
 body.dark-mode .card-back {
-    background-color: #e63946; /* Parte de trás do card no modo escuro */
+    background-color: #e63946;
 }
 
 footer {
     margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-body.dark-mode button {
-    background-color: #dc3545; /* Botão no modo escuro (vermelho) */
-}
-
-body.dark-mode button:hover {
-    background-color: #b92d2d; /* Cor do botão no hover no modo escuro */
 }

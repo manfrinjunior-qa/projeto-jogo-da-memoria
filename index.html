@@ -9,7 +9,14 @@
 <body>
     <header>
         <h1>Jogo da Memória</h1>
-        <button id="theme-toggle">Modo Escuro</button>
+        <div class="header-buttons">
+            <button id="theme-toggle">Modo Escuro</button>
+            <select id="level-select">
+                <option value="16">Iniciante</option>
+                <option value="24">Médio</option>
+                <option value="30">Avançado</option>
+            </select>
+        </div>
     </header>
     <div class="info">
         <p>Tempo: <span id="timer">00:00</span></p>
